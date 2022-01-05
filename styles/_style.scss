@@ -1,0 +1,96 @@
+.main-container {  
+    color: $grey;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8rem;
+} 
+
+.left-section {
+    margin-left: 5rem;
+    width: 40%;
+
+    h1 {
+        font-size: $heading;
+        padding-bottom: 3rem;
+     }
+ 
+     h1 span {
+        font-size: $main-heading;
+        color: $darkpink;
+     }
+
+     .tab { 
+        border-bottom: 0.15rem solid $grey;
+        padding: 0.5rem 0;
+        transition: 0.4s;
+        &:first-child{
+            border-top: 0.15rem solid $grey;
+         }
+
+         .active {
+            img {
+                transform: rotate(-135deg);
+                transition: 0.4s;
+            }
+         }
+
+        h2 {
+            font-size: $heading;
+            color: $grey;
+        }
+     }
+
+     .info-container {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            transition: 0.4s;
+            width: 100%;
+
+            p {
+                font-size: $text;
+                color: $black;
+            }
+
+            img {
+                width: 100%;
+            }
+     }
+
+     .icons img {
+        max-width: 3.125rem;
+        justify-content: space-between;
+        padding-right: 0.8rem;
+        padding-top: 3rem;
+    }
+}
+
+.right-section {
+    margin-right: 5rem;
+    width: 40%;
+
+    .circle {
+        background-color: $lightpink;
+        height: 34.44rem;
+        width: 34.44rem;
+        border-radius: 50%;
+        overflow: hidden;
+        position: relative;
+
+        img {
+            position:absolute;
+            left:50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            max-width: 27.25rem;
+            transition: opacity 0.5s;
+          }
+    }
+
+    p {
+        color: $lightpink;
+        padding-top: 2rem;
+        display: flex;
+        justify-content: center;
+    }
+}

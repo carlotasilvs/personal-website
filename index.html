@@ -4,9 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="styles/global.css">
+   
+    <title>Website Pessoal</title>
 </head>
 <body>
-    
+    <div class="main-container">
+        <div class="left-section">
+            <h1>
+                Hello, my name is <br>
+                <span>Carlota Silva</span> 
+            </h1>
+            <div>
+                <div class="tab">
+                    <button class="open"><h2> About me <img src="./img/Arrow.svg"></h2></button>
+                    <div class="info-container">
+                        <p>I'm from Coimbra, I'm 21 years old and I'm currently a student of the Master in Design and Multimedia in the University of Coimbra, 
+                            having finished my Bachelor's degree in Design and Multimedia in the same university, in July 2021.<br>
+                            My main areas of interest are graphic design, user interface design and web design.</p>
+                    </div>
+                </div>
+                <div class="tab">
+                    <button class="open"><h2> Some projects <img src="./img/Arrow.svg"></h2></button>
+                    <div class="info-container">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="icons">
+                <a href="https://www.linkedin.com/in/carlota-silva-689783173/"><img src="../personal-website/img/Icon_LinkedIn.png"></a>
+                <a href="https://www.behance.net/carlotasilva_"><img src="../personal-website/img/Icon_Behance.png"></a>
+                <a href="https://github.com/carlotasilvs"><img src="../personal-website/img/Icon_Github.png"></a>
+            </div>
+        </div>
+        <div class="right-section">
+            <div class="circle">
+                <img class="bottom" src="./img/Me.png">
+                <img class="top" src="./img/Me_Distorted.png">
+            </div>
+            <p>Put your mouse over the image to reveal my face!</p>
+        </div>
+    </div>
+
+    <script src="js/photoAnim.js"></script>
+    <script src="js/accordion.js"></script>
 </body>
 </html>

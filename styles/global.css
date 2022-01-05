@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap");
+.main-container {
+  color: #8E8D8A;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 8rem;
+}
+
+.left-section {
+  margin-left: 5rem;
+  width: 40%;
+}
+
+.left-section h1 {
+  font-size: 2.5rem;
+  padding-bottom: 3rem;
+}
+
+.left-section h1 span {
+  font-size: 3.75rem;
+  color: #E85A4F;
+}
+
+.left-section .tab {
+  border-bottom: 0.15rem solid #8E8D8A;
+  padding: 0.5rem 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.left-section .tab:first-child {
+  border-top: 0.15rem solid #8E8D8A;
+}
+
+.left-section .tab .active img {
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.left-section .tab h2 {
+  font-size: 2.5rem;
+  color: #8E8D8A;
+}
+
+.left-section .info-container {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  width: 100%;
+}
+
+.left-section .info-container p {
+  font-size: 1.5rem;
+  color: #000000;
+}
+
+.left-section .info-container img {
+  width: 100%;
+}
+
+.left-section .icons img {
+  max-width: 3.125rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-right: 0.8rem;
+  padding-top: 3rem;
+}
+
+.right-section {
+  margin-right: 5rem;
+  width: 40%;
+}
+
+.right-section .circle {
+  background-color: #E98074;
+  height: 34.44rem;
+  width: 34.44rem;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+
+.right-section .circle img {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  max-width: 27.25rem;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+.right-section p {
+  color: #E98074;
+  padding-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+html,
+body {
+  background-color: #EAE7DC;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 400;
+}
+
+button {
+  font-family: "Space Grotesk", sans-serif;
+  background-color: transparent;
+  border-style: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+* {
+  margin: 0;
+}
+/*# sourceMappingURL=global.css.map */

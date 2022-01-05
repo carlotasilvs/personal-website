@@ -1,0 +1,20 @@
+@import './_variables'; 
+@import './_style'; 
+
+html,
+body {
+    background-color: $beige;
+    font-family: $spacegrotesk;
+    font-weight: 400;
+}
+
+button {
+    font-family: $spacegrotesk;
+    background-color: transparent;
+    border-style: none;
+    user-select: none;
+}
+
+* {
+    margin: 0;
+}
