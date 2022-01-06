@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chilanka&display=swap");
 .main-container {
   color: #8E8D8A;
   display: -webkit-box;
@@ -207,6 +208,37 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+#graphicBtn {
+  cursor: pointer;
+}
+
+.graphic-design {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-image: url(../img/GraphicDesignBackground.png);
+  background-size: 100vw 100vh;
+  z-index: 2;
+  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.graphic-design h1 {
+  color: red;
+  font-family: "Chilanka", cursive;
+  margin-right: 10rem;
 }
 
 html,

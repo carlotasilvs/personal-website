@@ -174,3 +174,28 @@
         }
     }
 }
+
+#graphicBtn {
+    cursor: pointer;
+}
+
+.graphic-design {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: url(../img/GraphicDesignBackground.png);
+    background-size: 100vw 100vh;
+    z-index: 2;
+    display: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        color: red;
+        font-family: $chilanka;
+        margin-right: 10rem;
+    }
+}
