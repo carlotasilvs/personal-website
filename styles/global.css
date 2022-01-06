@@ -31,8 +31,6 @@
   padding: 0.5rem 0;
   -webkit-transition: 0.4s;
   transition: 0.4s;
-  /* Hide the images by default */
-  /* Fading animation */
 }
 
 .left-section .tab:first-child {
@@ -64,22 +62,24 @@
   margin: auto;
 }
 
-.left-section .tab .mySlides {
+.left-section .tab .slideshow-container p {
+  padding-bottom: 2rem;
+}
+
+.left-section .tab .slideshow-container .mySlides {
   display: none;
 }
 
-.left-section .tab .btn-wrapper {
+.left-section .tab .slideshow-container .btn-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  /* Position the "next button" to the right */
-  /* On hover, add a black background color with a little bit see-through */
 }
 
-.left-section .tab .btn-wrapper .prev, .left-section .tab .btn-wrapper .next {
+.left-section .tab .slideshow-container .btn-wrapper .prev, .left-section .tab .slideshow-container .btn-wrapper .next {
   cursor: pointer;
   bottom: 9rem;
   width: auto;
@@ -96,17 +96,17 @@
           user-select: none;
 }
 
-.left-section .tab .btn-wrapper .next {
+.left-section .tab .slideshow-container .btn-wrapper .next {
   right: 0;
   z-index: 3;
 }
 
-.left-section .tab .btn-wrapper .prev:hover, .left-section .tab .btn-wrapper .next:hover {
-  color: #E98074;
+.left-section .tab .slideshow-container .btn-wrapper .prev:hover svg path, .left-section .tab .slideshow-container .btn-wrapper .next:hover svg path {
+  fill: #E85A4F;
 }
 
 .left-section .tab .projectName {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #000000;
   padding: 1rem 0;
 }
@@ -146,7 +146,7 @@
 }
 
 .left-section .info-container p {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #000000;
   padding: 1rem 0;
 }
@@ -170,6 +170,7 @@
 .right-section {
   width: 40%;
   margin-top: 4rem;
+  margin-right: 4rem;
 }
 
 .right-section .img-container {
@@ -195,8 +196,8 @@
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   max-width: 27.25rem;
-  -webkit-transition: opacity 0.5s;
-  transition: opacity 0.5s;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .right-section .img-container p {
@@ -216,6 +217,7 @@
 
 .graphic-design {
   width: 100vw;
+  cursor: pointer;
   height: 100vh;
   position: fixed;
   top: 0;
@@ -224,9 +226,6 @@
   background-size: 100vw 100vh;
   z-index: 2;
   display: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
