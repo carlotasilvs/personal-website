@@ -1,8 +1,8 @@
 $("#graphicBtn").click(function(){
-    $(".graphic-design").fadeIn();
-    $(".graphic-design").css('display','flex');
+    $(".main__graphic-design").fadeIn();
+    $(".main__graphic-design").css('display','flex');
 })
 
-$(".graphic-design").click(function(){
-    $(".graphic-design").fadeOut();
+$(".main__graphic-design").click(function(){
+    $(".main__graphic-design").fadeOut();
 })

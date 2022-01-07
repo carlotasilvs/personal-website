@@ -8,56 +8,49 @@
     <link rel="stylesheet" href="styles/global.css">
    
     <title>Website Pessoal</title>
+    <link rel="shortcut icon" type="image/jpg" href="img/Favicon.png"/>
 </head>
 <body>
-    <div class="main-container">
-        <div class="left-section">
-            <h1>
-                Hi! My name is <br>
-                <span>Carlota Silva</span> 
-            </h1>
+    <div class="main">
+        <div class="main__left-section">
+            <h1>Hi! My name is <br> <span>Carlota Silva</span></h1>
             <div>
-                <div class="tab">
+                <div class="main__left-section__tab">
                     <button class="open"><h2> About me <img src="./img/Arrow.svg"></h2></button>
-                    <div class="info-container">
-                        <p>I'm from Coimbra, I'm 21 years old and I'm currently a student of the Master in Design and Multimedia in the University of Coimbra, 
+                    <div class="main__left-section__tab__info-container">
+                        <p>I'm from Coimbra, I'm 21 years old and I'm currently a student of the Master in Design and Multimedia at the University of Coimbra, 
                             having finished my Bachelor's degree in Design and Multimedia in the same university, in July 2021.<br>
                             My main areas of interest are <span id="graphicBtn"> graphic design</span>, user interface design and web design.</p>
                     </div>
                 </div>
-                <div class="tab">
+                <div class="main__left-section__tab">
                     <button class="open"><h2> Some projects <img src="./img/Arrow.svg"></h2></button>
-                    <div class="info-container">
-                        <div class="slideshow-container">
-
+                    <div class="main__left-section__tab__info-container">
+                        <div class="main__left-section__tab__info-container__slideshow-container">
                             <div class="mySlides fade">
                                 <div class="projectName"> Ciclo de Conversas de Design e Multimédia </div>
                                 <p>This project had the objective of creating the entire visual identity and website for the "Ciclo de Conversas de Design e Multimédia", which consists of a cycle of conferences that is
                                     held annually for the bachelor and master's degree in Design and Multimedia at the University of Coimbra.</p>
                                 <img src="./img/CCDM.png" style="width:100%">
                             </div>
-
                             <div class="mySlides fade">
                                 <div class="projectName"> Indigrow </div>
                                 <p>In this project we were challenged to make an experimental film about the colour "Indigo", having as project phases the pre-production, the production and the post-production. This work was made during a pandemic, so we had to use open-source resources.</p>
                                 <img src="./img/Indigrow.png" style="width:100%">
                             </div>
-
                             <div class="mySlides fade">
                                 <div class="projectName"> CultureInn </div>
                                 <p>The "CultureInn" project consisted of a UI/UX design project, whose challenge was to create an application focused on the "wellness" theme. We wanted to create a tool to promote cultural well-being. We designed an application that fosters cultural activity and provides stimulating challenges, that works as a "cultural calorie meter". Each user has the opportunity to progress within the app, by attending events/activities of a cutural nature.</p>
                                 <img src="./img/CultureInn.png" style="width:100%">
                             </div>
-                        
                             <div class="mySlides fade">
                                 <div class="projectName"> Encrypted messages </div>
-                                <p>Taking as a starting point one or more works exhibited in the exhibition "Cybernetic Serendipity (1968)", the goal of this project was to develop an interactive multimedia object, through appropriation, reinterpretation or deconstruction.
+                                <p>Based on the exhibition "Cybernetic Serendipity (1968)", the goal of this project was to develop an interactive multimedia object, through appropriation, reinterpretation or deconstruction.
                                     We focused on creating a language that enables interaction between at least two individuals, using cryptology as a tool to translate words into forms.
-                                    The project evolves as soon as users feel comfortable to explore the language and, for that, we created an application in React Native that serves as a tool to facilitate the decoding and exchange of messages. 
+                                    We created an application in React Native that serves as a tool to facilitate the decoding and exchange of messages. 
                                 </p>
                                 <img src="./img/EncryptedMessages.png" style="width:100%">
                             </div>
-                            
                             <div class="btn-wrapper">
                                 <a class="prev" onclick="plusSlides(-1)">
                                     <svg width="26" height="23" viewBox="0 0 26 23" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -74,16 +67,17 @@
                     </div>
                 </div>
             </div>
-            <div class="icons">
+            <div class="main__icons">
                 <a href="https://www.linkedin.com/in/carlota-silva-689783173/"><img src="../personal-website/img/Icon_LinkedIn.png"></a>
                 <a href="https://www.behance.net/carlotasilva_"><img src="../personal-website/img/Icon_Behance.png"></a>
                 <a href="https://github.com/carlotasilvs"><img src="../personal-website/img/Icon_Github.png"></a>
             </div>
         </div>
 
-        <div class="right-section">
-            <div class="img-container">
-                <div class="circle">
+        <div class="main__right-section">
+            <img id="profileImg" src="./img/Me.png">
+            <div class="main__right-section__img-container">
+                <div class="main__right-section__img-container__circle">
                     <img class="bottom" src="./img/Me.png">
                     <img class="top" src="./img/Me_Distorted.png">
                 </div>
@@ -92,7 +86,7 @@
         </div>
     </div>
 
-    <div class="graphic-design">
+    <div class="main__graphic-design">
         <h1>Graphic Design is my passion :)</h2>
         <img src="./img/GD-Photo.png">
     </div>

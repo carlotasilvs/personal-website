@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Chilanka&display=swap");
-.main-container {
+.main {
   color: #8E8D8A;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -10,67 +10,144 @@
           justify-content: space-between;
 }
 
-.left-section {
+@media only screen and (max-width: 48rem) {
+  .main {
+    display: block;
+  }
+}
+
+.main__left-section {
   margin-left: 5rem;
   width: 40%;
   margin-top: 12rem;
 }
 
-.left-section h1 {
+@media only screen and (max-width: 30rem) {
+  .main__left-section {
+    width: 70%;
+    margin-left: 3rem;
+    margin-top: 8rem;
+  }
+}
+
+.main__left-section h1 {
   font-size: 2.5rem;
   padding-bottom: 3rem;
 }
 
-.left-section h1 span {
+@media only screen and (max-width: 48rem) {
+  .main__left-section h1 {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 30rem) {
+  .main__left-section h1 {
+    font-size: 1.8rem;
+  }
+}
+
+.main__left-section h1 span {
   font-size: 3.75rem;
   color: #E85A4F;
 }
 
-.left-section .tab {
+@media only screen and (max-width: 48rem) {
+  .main__left-section h1 span {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 30rem) {
+  .main__left-section h1 span {
+    font-size: 2.5rem;
+  }
+}
+
+.main__left-section__tab {
   border-bottom: 0.15rem solid #8E8D8A;
   padding: 0.5rem 0;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
-.left-section .tab:first-child {
+.main__left-section__tab:first-child {
   border-top: 0.15rem solid #8E8D8A;
 }
 
-.left-section .tab .active img {
+.main__left-section__tab .active img {
   -webkit-transform: rotate(-135deg);
           transform: rotate(-135deg);
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
-.left-section .tab .closed img {
+.main__left-section__tab .closed img {
   -webkit-transform: rotate(0);
           transform: rotate(0);
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
-.left-section .tab h2 {
+.main__left-section__tab h2 {
   font-size: 2.5rem;
   color: #8E8D8A;
 }
 
-.left-section .tab .slideshow-container {
+@media only screen and (max-width: 48rem) {
+  .main__left-section__tab h2 {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 30rem) {
+  .main__left-section__tab h2 {
+    font-size: 1.8rem;
+  }
+}
+
+.main__left-section__tab__info-container {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  width: 100%;
+}
+
+.main__left-section__tab__info-container p {
+  font-size: 1.2rem;
+  color: #000000;
+  padding: 1rem 0;
+}
+
+.main__left-section__tab__info-container p span {
+  text-decoration: underline;
+}
+
+.main__left-section__tab__info-container img {
+  width: 100%;
+}
+
+.main__left-section__tab__info-container #graphicBtn {
+  cursor: pointer;
+}
+
+.main__left-section__tab__info-container__slideshow-container {
   max-width: 95%;
   position: relative;
   margin: auto;
 }
 
-.left-section .tab .slideshow-container p {
+.main__left-section__tab__info-container__slideshow-container p {
   padding-bottom: 2rem;
 }
 
-.left-section .tab .slideshow-container .mySlides {
+.main__left-section__tab__info-container__slideshow-container .mySlides {
   display: none;
 }
 
-.left-section .tab .slideshow-container .btn-wrapper {
+.main__left-section__tab__info-container__slideshow-container .btn-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -79,7 +156,7 @@
           justify-content: space-between;
 }
 
-.left-section .tab .slideshow-container .btn-wrapper .prev, .left-section .tab .slideshow-container .btn-wrapper .next {
+.main__left-section__tab__info-container__slideshow-container .prev, .main__left-section__tab__info-container__slideshow-container .next {
   cursor: pointer;
   bottom: 9rem;
   width: auto;
@@ -96,22 +173,22 @@
           user-select: none;
 }
 
-.left-section .tab .slideshow-container .btn-wrapper .next {
+.main__left-section__tab__info-container__slideshow-container .next {
   right: 0;
   z-index: 3;
 }
 
-.left-section .tab .slideshow-container .btn-wrapper .prev:hover svg path, .left-section .tab .slideshow-container .btn-wrapper .next:hover svg path {
+.main__left-section__tab__info-container__slideshow-container .prev:hover svg path, .main__left-section__tab__info-container__slideshow-container .next:hover svg path {
   fill: #E85A4F;
 }
 
-.left-section .tab .projectName {
+.main__left-section__tab__info-container__slideshow-container .projectName {
   font-size: 1.2rem;
   color: #000000;
   padding: 1rem 0;
 }
 
-.left-section .tab .fade {
+.main__left-section__tab__info-container__slideshow-container .fade {
   -webkit-animation-name: fade;
           animation-name: fade;
   -webkit-animation-duration: 1.5s;
@@ -136,30 +213,24 @@
   }
 }
 
-.left-section .info-container {
-  padding: 0 18px;
-  display: none;
-  overflow: hidden;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-  width: 100%;
+@media only screen and (max-width: 30rem) {
+  .main__icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    position: absolute;
+    background-color: blue;
+    bottom: 0;
+  }
 }
 
-.left-section .info-container p {
-  font-size: 1.2rem;
-  color: #000000;
-  padding: 1rem 0;
-}
-
-.left-section .info-container p span {
-  text-decoration: underline;
-}
-
-.left-section .info-container img {
-  width: 100%;
-}
-
-.left-section .icons img {
+.main__icons img {
   max-width: 3.125rem;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -167,20 +238,58 @@
   padding: 4rem 0.8rem 3rem 0;
 }
 
-.right-section {
+@media only screen and (max-width: 30rem) {
+  .main__icons img {
+    padding: 0;
+  }
+}
+
+.main__right-section {
   width: 40%;
   margin-top: 4rem;
   margin-right: 4rem;
 }
 
-.right-section .img-container {
+@media only screen and (max-width: 48rem) {
+  .main__right-section {
+    background-color: blue;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+.main__right-section #profileImg {
+  display: none;
+  width: 100%;
+}
+
+@media only screen and (max-width: 48rem) {
+  .main__right-section #profileImg {
+    display: block;
+  }
+}
+
+.main__right-section__img-container {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   padding-top: 4rem;
 }
 
-.right-section .img-container .circle {
+@media only screen and (max-width: 48rem) {
+  .main__right-section__img-container {
+    display: none;
+  }
+}
+
+.main__right-section__img-container__circle {
   background-color: #E98074;
   height: 34.44rem;
   width: 34.44rem;
@@ -189,7 +298,14 @@
   position: relative;
 }
 
-.right-section .img-container .circle img {
+@media only screen and (max-width: 48rem) {
+  .main__right-section__img-container__circle {
+    width: 20rem;
+    height: 20rem;
+  }
+}
+
+.main__right-section__img-container__circle img {
   position: absolute;
   left: 50%;
   bottom: 0;
@@ -200,7 +316,13 @@
   transition: opacity 0.5s ease-in-out;
 }
 
-.right-section .img-container p {
+@media only screen and (max-width: 48rem) {
+  .main__right-section__img-container__circle img {
+    max-width: 15rem;
+  }
+}
+
+.main__right-section__img-container p {
   color: #E98074;
   padding-top: 2rem;
   display: -webkit-box;
@@ -211,11 +333,19 @@
           justify-content: center;
 }
 
-#graphicBtn {
-  cursor: pointer;
+@media only screen and (max-width: 48rem) {
+  .main__right-section__img-container p {
+    display: none;
+  }
 }
 
-.graphic-design {
+@media only screen and (max-width: 30rem) {
+  .main__right-section__img-container p {
+    display: none;
+  }
+}
+
+.main__graphic-design {
   width: 100vw;
   cursor: pointer;
   height: 100vh;
@@ -234,10 +364,23 @@
           align-items: center;
 }
 
-.graphic-design h1 {
+.main__graphic-design h1 {
   color: red;
   font-family: "Chilanka", cursive;
   margin-right: 10rem;
+}
+
+@media only screen and (max-width: 30rem) {
+  .main__graphic-design h1 {
+    font-size: 1rem;
+    margin-right: 3rem;
+  }
+}
+
+@media only screen and (max-width: 30rem) {
+  .main__graphic-design img {
+    resize: 30%;
+  }
 }
 
 html,

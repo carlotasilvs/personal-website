@@ -1,198 +1,303 @@
-.main-container {  
+.main {
     color: $grey;
     display: flex;
     justify-content: space-between;
-} 
 
-.left-section {
-    margin-left: 5rem;
-    width: 40%;
-    margin-top: 12rem;
+    @media only screen and (max-width: $tablet) {
+        display: block;
+    }
 
-    h1 {
-        font-size: $heading;
-        padding-bottom: 3rem;
-     }
- 
-     h1 span {
-        font-size: $main-heading;
-        color: $darkpink;
-     }
+    &__left-section {
+        margin-left: 5rem;
+        width: 40%;
+        margin-top: 12rem;
 
-     .tab { 
-        border-bottom: 0.15rem solid $grey;
-        padding: 0.5rem 0;
-        transition: 0.4s;
-
-        &:first-child{
-            border-top: 0.15rem solid $grey;
+        @media only screen and (max-width: $mobile) {
+            width: 70%;
+            margin-left: 3rem;
+            margin-top: 8rem;
         }
 
-         .active {
-            img {
-                transform: rotate(-135deg);
-                transition: 0.4s;
-            }
-         }
-
-         .closed {
-            img {
-                transform: rotate(0);
-                transition: 0.4s;
-            }
-         }
-
-        h2 {
+        h1 {
             font-size: $heading;
-            color: $grey;
-        }
+            padding-bottom: 3rem;
 
-        .slideshow-container {
-                max-width: 95%;
-                position: relative;
-                margin: auto;
+            @media only screen and (max-width: $tablet) {
+                font-size: 2rem;
+            }
+    
+            @media only screen and (max-width: $mobile) {
+                font-size: 1.8rem;
+            }
+         }
 
-            p {
-                padding-bottom: 2rem;
-            }
-            
-            .mySlides {
-                display: none;
-            }
+         h1 span {
+            font-size: $main-heading;
+            color: $darkpink;
 
-            .btn-wrapper {
-                display: flex;
-                justify-content: space-between;
-                
-            .prev, .next {
-                cursor: pointer;
-                bottom: 9rem;
-                width: auto;
-                padding: 16px;
-                color: $black;
-                font-weight: bold;
-                font-size: 18px;
-                transition: 0.6s ease;
-                border-radius: 0 3px 3px 0;
-                user-select: none;
+            @media only screen and (max-width: $tablet) {
+                font-size: 3rem;
             }
-            
-            .next {
-                right: 0;
-                z-index: 3;
+    
+            @media only screen and (max-width: $mobile) {
+                font-size: 2.5rem;
             }
-            
-            .prev:hover svg path, .next:hover svg path{
-                fill: $darkpink;
-            }
-          }
-        }
+         }
 
-          .projectName {
-              font-size: $text;
-              color: $black;
-              padding: 1rem 0;
-          }
-          
-          .fade {
-            animation-name: fade;
-            animation-duration: 1.5s;
-          }
-          
-          @keyframes fade {
-            from {opacity: .4}
-            to {opacity: 1}
-          }
-     }
-
-     .info-container {
-            padding: 0 18px;
-            display: none;
-            overflow: hidden;
+         &__tab {
+            border-bottom: 0.15rem solid $grey;
+            padding: 0.5rem 0;
             transition: 0.4s;
-            width: 100%;
+    
+            &:first-child {
+                border-top: 0.15rem solid $grey;
+            }
 
-            p {
-                font-size: $text;
-                color: $black;
-                padding: 1rem 0;
-
-                span {
-                    text-decoration: underline;
+            .active {
+                img {
+                    transform: rotate(-135deg);
+                    transition: 0.4s;
                 }
             }
-
-            img {
-                width: 100%;
+    
+            .closed {
+                img {
+                    transform: rotate(0);
+                    transition: 0.4s;
+                }
             }
-     }
+    
+            h2 {
+                font-size: $heading;
+                color: $grey;
 
-     .icons img {
+                @media only screen and (max-width: $tablet) {
+                    font-size: 2rem;
+                }
+    
+                @media only screen and (max-width: $mobile) {
+                    font-size: 1.8rem;
+                }
+            }
+            
+            &__info-container {
+                padding: 0 18px;
+                display: none;
+                overflow: hidden;
+                transition: 0.4s;
+                width: 100%;
+        
+                p {
+                    font-size: $text;
+                    color: $black;
+                    padding: 1rem 0;
+        
+                    span {
+                        text-decoration: underline;
+                    }
+                }
+        
+                img {
+                    width: 100%;
+                }
+
+                #graphicBtn {
+                    cursor: pointer;
+                }
+                
+
+                &__slideshow-container {
+                    max-width: 95%;
+                    position: relative;
+                    margin: auto;
+    
+                    p {
+                        padding-bottom: 2rem;
+                    }
+                    
+                    .mySlides {
+                        display: none;
+                    }
+        
+                    .btn-wrapper {
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                        
+                    .prev, .next {
+                        cursor: pointer;
+                        bottom: 9rem;
+                        width: auto;
+                        padding: 16px;
+                        color: $black;
+                        font-weight: bold;
+                        font-size: 18px;
+                        transition: 0.6s ease;
+                        border-radius: 0 3px 3px 0;
+                        user-select: none;
+                    }
+                    
+                    .next {
+                        right: 0;
+                        z-index: 3;
+                    }
+                    
+                    .prev:hover svg path, .next:hover svg path {
+                        fill: $darkpink;
+                    }
+                    
+                    .projectName {
+                        font-size: $text;
+                        color: $black;
+                        padding: 1rem 0;
+                    }
+                    
+                    .fade {
+                      animation-name: fade;
+                      animation-duration: 1.5s;
+                    }
+                    
+                    @keyframes fade {
+                      from {opacity: .4}
+                      to {opacity: 1}
+                    }
+                }
+            }
+        }
+    }
+
+    &__icons {
+        @media only screen and (max-width: $mobile) {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+            position: absolute;
+            background-color: blue;
+            bottom: 0;
+        }
+    }
+
+    &__icons img {
         max-width: 3.125rem;
         justify-content: space-between;
         padding: 4rem 0.8rem 3rem 0;
-    }
-}
 
-.right-section {
-    width: 40%;
-    margin-top: 4rem;
-    margin-right: 4rem;
-
-    .img-container {
-        position: sticky;
-        top: 0;
-        padding-top: 4rem;
-
-        .circle {
-            background-color: $lightpink;
-            height: 34.44rem;
-            width: 34.44rem;
-            border-radius: 50%;
-            overflow: hidden;
-            position: relative;
-    
-            img {
-                position: absolute;
-                left: 50%;
-                bottom: 0;
-                transform: translateX(-50%);
-                max-width: 27.25rem;
-                transition: opacity 0.5s ease-in-out;
-              }
+        @media only screen and (max-width: $mobile) {
+            padding: 0;
         }
-    
-        p {
-            color: $lightpink;
-            padding-top: 2rem;
+    }
+
+    &__right-section {
+        width: 40%;
+        margin-top: 4rem;
+        margin-right: 4rem;
+
+        @media only screen and (max-width: $tablet) {
+            background-color: blue;
             display: flex;
-            justify-content: center;
+            justify-content: flex-end;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+        #profileImg {
+            display: none;
+            width: 100%;
+
+            @media only screen and (max-width: $tablet) {
+                display: block;
+            }
+
+            @media only screen and (max-width: $mobile) {
+                
+            }
+        }
+
+        &__img-container {
+            position: sticky;
+            top: 0;
+            padding-top: 4rem;
+
+            @media only screen and (max-width: $tablet) {
+                display: none;
+            }
+
+            &__circle {
+                background-color: $lightpink;
+                height: 34.44rem;
+                width: 34.44rem;
+                border-radius: 50%;
+                overflow: hidden;
+                position: relative;
+    
+                @media only screen and (max-width: $tablet) {
+                    width: 20rem;
+                    height: 20rem;
+                }
+        
+                img {
+                    position: absolute;
+                    left: 50%;
+                    bottom: 0;
+                    transform: translateX(-50%);
+                    max-width: 27.25rem;
+                    transition: opacity 0.5s ease-in-out;
+    
+                    @media only screen and (max-width: $tablet) {
+                        max-width: 15rem;
+                    }
+                }
+            }
+
+            p {
+                color: $lightpink;
+                padding-top: 2rem;
+                display: flex;
+                justify-content: center;
+    
+                @media only screen and (max-width: $tablet) {
+                    display: none;
+                }
+    
+                @media only screen and (max-width: $mobile) {
+                    display: none;
+                }
+            }
         }
     }
-}
 
-#graphicBtn {
-    cursor: pointer;
-}
+    &__graphic-design {
+        width: 100vw;
+        cursor: pointer;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-image: url(../img/GraphicDesignBackground.png);
+        background-size: 100vw 100vh;
+        z-index: 2;
+        display: none;
+        justify-content: center;
+        align-items: center;
+    
+        h1 {
+            color: red;
+            font-family: $chilanka;
+            margin-right: 10rem;
 
-.graphic-design {
-    width: 100vw;
-    cursor: pointer;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-image: url(../img/GraphicDesignBackground.png);
-    background-size: 100vw 100vh;
-    z-index: 2;
-    display: none;
-    justify-content: center;
-    align-items: center;
+            @media only screen and (max-width: $mobile) {
+                font-size: 1rem;
+                margin-right: 3rem;
+            }
+        }
 
-    h1 {
-        color: red;
-        font-family: $chilanka;
-        margin-right: 10rem;
+        img {
+            @media only screen and (max-width: $mobile) {
+                resize: 30%;
+            }
+        }
     }
 }
 
