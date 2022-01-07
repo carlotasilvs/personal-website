@@ -314,6 +314,7 @@
 
 .main__right-section__img-container__circle {
   background-color: #E98074;
+  margin-top: 4rem;
   height: 34.44rem;
   width: 34.44rem;
   border-radius: 50%;
@@ -398,13 +399,13 @@
 @media only screen and (max-width: 30rem) {
   .main__graphic-design h1 {
     font-size: 1rem;
-    margin-right: 3rem;
+    margin: 4rem 0;
   }
 }
 
 @media only screen and (max-width: 30rem) {
   .main__graphic-design img {
-    resize: 30%;
+    width: 60%;
   }
 }
 
