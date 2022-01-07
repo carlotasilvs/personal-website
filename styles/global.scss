@@ -6,6 +6,8 @@ body {
     background-color: $beige;
     font-family: $spacegrotesk;
     font-weight: 400;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 button {

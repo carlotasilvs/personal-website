@@ -8,6 +8,9 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  position: relative;
+  min-height: 100vh;
+  overflow-y: auto;
 }
 
 @media only screen and (max-width: 48rem) {
@@ -223,10 +226,7 @@
         -ms-flex-direction: column;
             flex-direction: column;
     gap: 1.5rem;
-    margin-top: 1.5rem;
-    position: absolute;
-    background-color: blue;
-    bottom: 0;
+    margin-top: 4rem;
   }
 }
 
@@ -241,18 +241,17 @@
 @media only screen and (max-width: 30rem) {
   .main__icons img {
     padding: 0;
+    width: 2.5rem;
   }
 }
 
 .main__right-section {
   width: 40%;
   margin-top: 4rem;
-  margin-right: 4rem;
 }
 
 @media only screen and (max-width: 48rem) {
   .main__right-section {
-    background-color: blue;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -262,16 +261,41 @@
     position: absolute;
     bottom: 0;
     right: 0;
+    margin-right: 1rem;
   }
 }
 
-.main__right-section #profileImg {
+@media only screen and (max-width: 30rem) {
+  .main__right-section {
+    width: 80%;
+    right: -8rem;
+    bottom: 0;
+    margin-right: 4rem;
+  }
+}
+
+.main__right-section #profileImgMobile, .main__right-section #profileImgTablet {
   display: none;
   width: 100%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 @media only screen and (max-width: 48rem) {
-  .main__right-section #profileImg {
+  .main__right-section #profileImgTablet {
+    display: block;
+    width: 120%;
+  }
+}
+
+@media only screen and (max-width: 30rem) {
+  .main__right-section #profileImgTablet {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 30rem) {
+  .main__right-section #profileImgMobile {
     display: block;
   }
 }
@@ -298,13 +322,6 @@
   position: relative;
 }
 
-@media only screen and (max-width: 48rem) {
-  .main__right-section__img-container__circle {
-    width: 20rem;
-    height: 20rem;
-  }
-}
-
 .main__right-section__img-container__circle img {
   position: absolute;
   left: 50%;
@@ -314,12 +331,6 @@
   max-width: 27.25rem;
   -webkit-transition: opacity 0.5s ease-in-out;
   transition: opacity 0.5s ease-in-out;
-}
-
-@media only screen and (max-width: 48rem) {
-  .main__right-section__img-container__circle img {
-    max-width: 15rem;
-  }
 }
 
 .main__right-section__img-container p {
@@ -364,10 +375,25 @@
           align-items: center;
 }
 
+@media only screen and (max-width: 48rem) {
+  .main__graphic-design {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .main__graphic-design h1 {
   color: red;
   font-family: "Chilanka", cursive;
   margin-right: 10rem;
+}
+
+@media only screen and (max-width: 48rem) {
+  .main__graphic-design h1 {
+    margin: 4rem 0;
+  }
 }
 
 @media only screen and (max-width: 30rem) {
@@ -388,6 +414,8 @@ body {
   background-color: #EAE7DC;
   font-family: "Space Grotesk", sans-serif;
   font-weight: 400;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 button {
