@@ -301,8 +301,7 @@
 }
 
 .main__right-section__img-container {
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   top: 0;
   padding-top: 4rem;
 }
